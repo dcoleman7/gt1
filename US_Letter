@@ -1,0 +1,23 @@
+package Chapter5;
+import java.util.Scanner;
+public class USLetter {
+	public static void main(String [] args) {
+		
+		//Scanner
+		Scanner input = new Scanner(System.in);
+		
+		double weight = 0;
+		do {
+			System.out.println("Enter a weight in ounces for letters to mail out");
+			System.out.println("When you are done, please enter -1 to finish: ");
+			
+			weight = input.nextDouble();
+			
+			if(weight < 1 && weight > 0)
+				System.out.println("You can use forever stamp.");
+			else if(weight > 1)
+				System.out.println("You need additional postage");
+		}while(weight != -1);
+			System.out.print("Goodbye!");
+	}
+}
